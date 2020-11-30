@@ -12,7 +12,8 @@ namespace Assignment.Address
         private string city;
         private string country;
 
-        // CONSTRUCTORS
+        // CONSTRUCTORS 
+        public Address() { } // Not use in our program
         public Address(int addressNum, string street, string city, string country)
         {
             AddressNum = addressNum;

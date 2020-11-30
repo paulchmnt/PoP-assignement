@@ -15,10 +15,10 @@ namespace Assignment.Student
             Console.WriteLine("First, you will have to enter informations about a student.");
             Student student = CreateStudent();
             Console.WriteLine($"The student {student.FullName} has been created successfully!");
-            int choice = 0; // Creating this variable here to not create new ones at each loop
+            int choice; // Creating this variable here to not create new ones at each loop
             while (true)
             {
-            
+                choice = 0;
                 Console.WriteLine("\n---------------------------------------");
                 Console.WriteLine("Menu:\n\t" +
                     "1. Display the student's average score\n\t" +
@@ -161,8 +161,8 @@ namespace Assignment.Student
             while (true)
             {  
                 Console.WriteLine("You have 2 options to enter the student's score array:\n\t" +
-                    "1. Entering the scores one by one in the array manually (max 25 values)\n\t" +
-                    "2. Create an array with x random scores inside (you just choose 'x' value, max 25)");
+                    "1. Entering the scores one by one in the array manually\n\t" +
+                    "2. Create an array with x random scores inside (you just choose 'x' value)");
                 Console.Write("Please choose an option (1 or 2) > ");
                 string choiceString = Console.ReadLine();
                 if (int.TryParse(choiceString, out int result) && (int.Parse(choiceString) == 1 || int.Parse(choiceString) == 2))
@@ -194,15 +194,15 @@ namespace Assignment.Student
             // Asking for size of the array
             while (true)
             {
-                Console.WriteLine("How many scores do you want to enter (25 max)?");
+                Console.WriteLine("How many scores do you want to enter?");
                 val = Console.ReadLine();
-                if (int.TryParse(val, out int result) && int.Parse(val) > 0 && int.Parse(val) <= 25) // Conditions
+                if (int.TryParse(val, out int result) && int.Parse(val) > 0) // Conditions
                 {
                     size = result;
                     break;
                 }
                 else
-                    Console.WriteLine("Error! Please enter a valid integer number (from 1 to 25).");
+                    Console.WriteLine("Error! Please enter a valid integer number (1 or plus).");
             }
             scores = new int[size];
             // Filling the array
@@ -236,15 +236,15 @@ namespace Assignment.Student
             // Asking for size of the array
             while (true)
             {
-                Console.WriteLine("How many scores do you want to enter (25 max)?");
+                Console.WriteLine("How many scores do you want to enter?");
                 val = Console.ReadLine();
-                if (int.TryParse(val, out int result) && int.Parse(val) > 0 && int.Parse(val) <= 25) // Conditions
+                if (int.TryParse(val, out int result) && int.Parse(val) > 0) // Conditions
                 {
                     size = result;
                     break;
                 }
                 else
-                    Console.WriteLine("Error! Please enter a valid integer number (from 1 to 25).");
+                    Console.WriteLine("Error! Please enter a valid integer number (1 or plus).");
             }
             scores = new int[size];
             // Filling the array

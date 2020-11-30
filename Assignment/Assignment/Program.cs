@@ -9,7 +9,6 @@ namespace Assignment
         {
             StudentTester assignment = new StudentTester();
             assignment.Main();
-
         }
     }
 }

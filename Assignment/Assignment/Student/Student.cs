@@ -66,14 +66,14 @@ namespace Assignment.Student
                 return FirstName + " " + LastName;
             }
         }
-        public int AverageScore
+        public float AverageScore
         {
             get // Just a get, we don't nee a set for this property
             {
                 int tot = 0;
                 for (int i = 0; i < scores.Length; i++)
                     tot += scores[i];
-                return tot / scores.Length;
+                return (float) tot / scores.Length;
             }
         }
         public string FullAddress
@@ -99,7 +99,7 @@ namespace Assignment.Student
         }
         public override string ToString()
         {
-            string info = $"Student informations:\n" +
+            string info = $"Student {FullName} informations:\n" +
                 $"First name: {FirstName}\n" +
                 $"Last name: {LastName}\n" +
                 $"Student number: {StudentNumber}\n" +

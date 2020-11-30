@@ -9,7 +9,10 @@ namespace Assignment.Person
         // FIELDS
         private string firstName;
         private string lastName;
-        
+
+        // CONSTRUCTOR
+        public Person() { } // Not use in our program
+
         // PROPERTIES
         public string FirstName
         {
