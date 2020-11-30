@@ -7,8 +7,8 @@ namespace Assignment
     {
         static void Main(string[] args)
         {
-            StudentTester assignement = new StudentTester();
-            assignement.Main();
+            StudentTester assignment = new StudentTester();
+            assignment.Main();
 
         }
     }
